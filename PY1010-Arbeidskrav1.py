@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Sep 25 16:29:17 2025
+Sist oppdatert: 2025 09 25
 
-@author: G022322
+Kristina Olafsen
+
 """
 
 #  Antatt kjørelengde per år
