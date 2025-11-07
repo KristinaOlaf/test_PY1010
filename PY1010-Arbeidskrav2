@@ -1,0 +1,24 @@
+#Oppgave 1
+
+alder = int(input("hvilket år er du født?"))
+
+fødselsår = 1992
+print(fødselsår)
+
+nåværende_år = 2025
+print(nåværende_år)
+
+alder_i_2025 = nåværende_år - alder
+print(nåværende_år-alder)
+
+
+print("I løpet av {nåværende_år} blir du {alder_i_2025} år gammel")
+
+
+hvilket år er du født? 1992
+1992
+2025
+33
+I løpet av {nåværende_år} blir du {alder_i_2025} år gammel
+
+
