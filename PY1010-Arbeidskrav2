@@ -3,22 +3,41 @@
 alder = int(input("hvilket år er du født?"))
 
 fødselsår = 1992
-print(fødselsår)
+print("Jeg er født i", fødselsår)
 
 nåværende_år = 2025
-print(nåværende_år)
+print("I år er vi i årstall", nåværende_år)
 
 alder_i_2025 = nåværende_år - alder
-print(nåværende_år-alder)
+print("I år er jeg", nåværende_år-alder, "gammel")
 
 
 print("I løpet av {nåværende_år} blir du {alder_i_2025} år gammel")
 
-
 hvilket år er du født? 1992
-1992
-2025
-33
+Jeg er født i 1992
+I år er vi i årstall 2025
+I år er jeg 33 gammel
 I løpet av {nåværende_år} blir du {alder_i_2025} år gammel
+
+
+#Oppgave 2
+
+antall_elever = int(input("skriv inn antall elever:"))
+
+pizza_per_elev = 0.25
+print("Hver elev spiser", pizza_per_elev, "pizza")
+
+total_antall_pizza = antall_elever * pizza_per_elev
+print(total_antall_pizza)
+
+totalt_antall_pizzaer_som_skal_kjøpes = int(total_antall_pizza)
+print("Totalt antall pizzaer som må kjøpes til klassefesten er", totalt_antall_pizzaer_som_skal_kjøpes)
+
+skriv inn antall elever: 21
+Hver elev spiser 0.25 pizza
+5.25
+Totalt antall pizzaer som må kjøpes til klassefesten er 5
+
 
 
