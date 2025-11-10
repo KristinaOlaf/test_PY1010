@@ -52,5 +52,37 @@ print(f'Vinkelen på {v_grad} grader tilsvarer {v_rad:.4f} radianer.')
 Skriv inn gradtallet:  180
 Vinkelen på 180.0 grader tilsvarer 3.1416 radianer.
 
+#Oppgave 6
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definer x-verdier
+x = np.linspace(-10, 10, 200)
+
+# Definer funksjonen f(x) = -x^2 - 5
+y = -x**2 - 5
+
+# Lag plottet
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, color='blue', label=r'$f(x) = -x^2 - 5$')
+
+# Legg til rutenett, akser og tittel
+plt.grid(True)
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.title('Plot av f(x) = -x² - 5')
+plt.axhline(0, color='black', linewidth=1)  # x-akse
+plt.axvline(0, color='black', linewidth=1)  # y-akse
+
+# Marker toppunktet
+plt.scatter(0, -5, color='red', zorder=5)
+plt.text(0, -5, '(0, -5)', fontsize=10, ha='left', va='bottom')
+
+# Legg til legend
+plt.legend()
+plt.show()
+
+
 
 
