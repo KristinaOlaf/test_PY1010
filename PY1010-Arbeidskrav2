@@ -52,6 +52,105 @@ print(f'Vinkelen på {v_grad} grader tilsvarer {v_rad:.4f} radianer.')
 Skriv inn gradtallet:  180
 Vinkelen på 180.0 grader tilsvarer 3.1416 radianer.
 
+#Oppgave 4
+
+a, b, c) 
+# Dictionary med land, hovedstad og innbyggertall
+data = {
+    "Norge": ["Oslo", 0.634],
+    "England": ["London", 8.982],
+    "Frankrike": ["Paris", 2.161],
+    "Italia": ["Roma", 2.873],
+    "Spania": ["Madrid", 3.223],
+    "Tyskland": ["Berlin", 3.769],
+    "Sverige": ["Stockholm", 1.600],
+    "Danmark": ["København", 0.805],
+    "USA": ["Washington D.C.", 0.712],
+    "Japan": ["Tokyo", 13.960]
+}
+
+# Be brukeren om å skrive inn et land
+land = input("Skriv inn et land: ")
+
+# Sjekk om landet finnes i dictionaryen
+if land in data:
+    hovedstad, innbyggere = data[land]
+    print(f"{hovedstad} er hovedstaden i {land} og det er {innbyggere} mill. innbyggere i {hovedstad}.")
+else:
+    print("Landet finnes ikke i databasen.")
+
+
+Skriv inn et land:  England
+London er hovedstaden i England og det er 8.982 mill. innbyggere i London.
+
+# Be brukeren om å legge til nytt land
+nytt_land = input("Skriv inn navnet på et nytt land: ").strip().capitalize()
+
+# Sjekk at landet ikke allerede finnes
+if nytt_land in data:
+    print(f"{nytt_land} finnes allerede i databasen.")
+else:
+    hovedstad = input(f"Skriv inn hovedstaden i {nytt_land}: ").strip().capitalize()
+    innbyggere = float(input(f"Skriv inn antall innbyggere (i millioner) i {hovedstad}: "))
+    
+    # Legg til i dictionary
+    data[nytt_land] = [hovedstad, innbyggere]
+    print("\nOppdatert dictionary:")
+    for land, info in data.items():
+        print(f"{land}: {info}")
+
+Skriv inn et land:  Finland
+Landet finnes ikke i databasen.
+Skriv inn navnet på et nytt land:  Finland
+Skriv inn hovedstaden i Finland:  Helsinki
+Skriv inn antall innbyggere (i millioner) i Helsinki:  0.650
+
+Oppdatert dictionary:
+Norge: ['Oslo', 0.634]
+England: ['London', 8.982]
+Frankrike: ['Paris', 2.161]
+Italia: ['Roma', 2.873]
+Spania: ['Madrid', 3.223]
+Tyskland: ['Berlin', 3.769]
+Sverige: ['Stockholm', 1.6]
+Danmark: ['København', 0.805]
+USA: ['Washington D.C.', 0.712]
+Japan: ['Tokyo', 13.96]
+Finland: ['Helsinki', 0.65]
+
+#Oppgave 5
+
+import math
+
+def figur_info(a, b):
+    # Radius til halvsirkel
+    r = a / 2
+    
+    # Areal
+    areal_trekant = (a * b) / 2
+    areal_halvsirkel = (math.pi * r**2) / 2
+    areal_total = areal_trekant + areal_halvsirkel
+    
+    # Omkrets (ytre)
+    hypotenus = math.sqrt(a**2 + b**2)
+    omkrets = b + hypotenus + (math.pi * r)
+    
+    return areal_total, omkrets
+
+# Eksempelbruk:
+a = float(input("Skriv inn a (grunnlinje/diameter): "))
+b = float(input("Skriv inn b (høyde): "))
+
+areal, omkrets = figur_info(a, b)
+print(f"Arealet av figuren er {areal:.3f} kvadrat-enheter.")
+print(f"Ytre omkrets av figuren er {omkrets:.3f} enheter.")
+
+Skriv inn a (grunnlinje/diameter):  6
+Skriv inn b (høyde):  8
+Arealet av figuren er 38.137 kvadrat-enheter.
+Ytre omkrets av figuren er 27.425 enheter.
+
+
 #Oppgave 6
 
 import numpy as np
